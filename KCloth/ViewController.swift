@@ -33,7 +33,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             imageview.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
             imageview.contentMode = .ScaleAspectFit
             
-            let gesture = UITapGestureRecognizer(target: self, action: "imageViewSelected:")
+            let gesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.imageViewSelected(_:)))
             imageview.addGestureRecognizer(gesture)
             
             self.view .bringSubviewToFront(imageview)
